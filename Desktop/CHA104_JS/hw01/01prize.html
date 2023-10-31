@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw01</title>
+</head>
+<body>
+    <p id="result"></p>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+    
+
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        const maxBall = 10; // 球球最大數。
+        const minBall = 0; // 球球最小數.
+        const ballSize = 20; // 球球大小
+        const padding = 20; // 球球之间的兼具
+
+        let totalPrize = 0; // 總金额。
+        let drawCount = 0; // 摸彩次數。
+
+        function drawBall(x, y, radius, color, number) {
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, Math.PI * 2);
+            ctx.fillStyle = color;
+            ctx.fill();
+            ctx.fillStyle = "white";
+            ctx.font = "16px Arial";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillText(number, x, y);
+        }
+
+        function drawAllBalls() {
+            let x = padding;
+            let y = padding;
+
+            for (let i = 0; i < 11; i++) {
+                const rand = Math.floor(Math.random() * (maxBall + 1)); 
+
+                if (rand === 0) {
+
+                    const resultText = `摸彩次數：${drawCount} 次<br>中獎總金额：${totalPrize}百元`;
+                    document.getElementById("result").innerHTML = resultText;
+                    return;
+                } else {
+                    drawBall(x, y, ballSize, `rgb(${Math.random() * 256}, ${Math.random() * 256}, ${Math.random() * 256})`, rand);
+                    drawCount++;
+                    totalPrize += rand;
+                }
+
+                x += ballSize + padding;
+                if (x + ballSize + padding > canvas.width) {
+                    x = padding;
+                    y += ballSize + padding;
+                }
+            }
+        }
+
+        drawAllBalls();
+    </script>
+</body>
+</html>
+

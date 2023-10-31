@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>這邊可以改標題</title>
+
+</head>
+
+<body>
+
+    <a href="">問候</a>
+    <p id="p"></p>
+    <script>
+       
+        //寫資料到網頁中
+        let pp = document.createElement('p');
+        let hi = document.querySelector('a');
+        hi.innerText = "Hello";
+        pp.innerText = "寫資料到網頁中";
+
+        document.body.append(pp);
+        
+        //改文件標題
+        document.title = "改成我想改的內容";
+    </script>
+</body>
+
+</html>
