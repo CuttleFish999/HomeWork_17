@@ -24,7 +24,7 @@
 	//採取適當的內縮，增加閱讀性
 </script>
 
-<!-- 
+
 <h2>if 句型2(多行敍述)</h2>
 <script>
 	var avg = 37;
@@ -73,7 +73,7 @@
 </script>
 
 
-<h2>if句型......5______1/h2>
+<h2>if句型......5______1</h2>
 <script>
 	//可以有巢狀if
 	var lowType = "0";// 1->5000, 2->3000, 3->1000
@@ -82,6 +82,7 @@
 
 	if (lowType === "1"){
 		amount = 5000;
+		
 		if (education === "有") {
 			amount = amount + 1000;
 		}
@@ -98,13 +99,13 @@
 <h2>if句型......5______2</h2>
 <script>
 	//可以有巢狀if
-	var lowType = "0";// 1->5000, 2->3000, 3->1000
+	var lowType = "1";// 1->5000, 2->3000, 3->1000
 	var education = false;
 	var amount = 0;
 
 	if (lowType === "1") {
 		amount = 5000;
-		if (education) {
+		if (education === true) {
 			amount = amount + 1000;
 		}
 	} else if (lowType === "2") {
@@ -115,26 +116,44 @@
 
 	document.write( "補助款 : ", amount, "<br>");
 </script>
-
+ 
 <h2>x===true</h2>
 <script>
 	// 當x為布林值時, x===true 可以簡寫成 x
-	var error = true;
+	var error = false;
 
-	if (error === true) {
+	if (error === true) {  
 		document.write(  "有錯喔~<br>");
+	} else {
+		document.write(  "没錯!没錯!!没錯!!!<br>");
+	}
+
+	//可改寫成
+	if (error) {  
+		document.write(  "有錯喔~<br>");
+	} else {
+		document.write(  "没錯!没錯!!没錯!!!<br>");
 	}
 </script>
 
 <h2>x===false</h2>
 <script>
 	// 當x為布林值時, x===false 可以簡寫成 !x	
-	var error = false;
+	var error = true;
 
-	if (error === false) {
+	if (error === false) {  //-----
 		document.write(  "没錯喔~<br>");
+	} else {
+		document.write(  "有錯喔~<br>");
+	}
+
+	//可改寫成
+	if ( !error) {  //-----
+		document.write(  "没錯喔~<br>");
+	} else {
+		document.write(  "有錯喔~<br>");
 	}
 </script>
---> 
+<!----> 
 </body>
 </html>
