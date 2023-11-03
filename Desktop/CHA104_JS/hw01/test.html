@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            
+        }
+
+        input{
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+            
+        }
+
+        #container label {
+            display: inline-block;
+            position: relative;
+            width: 300px;
+        }
+
+        #GOBNT{
+            position: absolute;
+            top: 0;
+            left: 200px;
+            width: 50px;
+            height: 50px;
+            transition: .3s;
+        }
+
+        #GOBNT:hover{
+            background:#000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <label for="yearInput">年: <input value="1999" type="text" id="yearInput"></label>
+        <label for="monthInput">月: <input value="01" type="text" id="yearInput"></label>
+        <label for="dayInput">日: <input value="01" type="text" id="yearInput"></label>
+    </div>
+    <button id="GOBNT">查詢</button>
+    <table id="日歷">
+
+    </table>
+
+
+    <script>
+        const GOBNT = document.getElementByID("GOBNT");
+        const yearInput = document.getElementByID("yearInput");
+        const monthInput = document.getElementByID("monthInput");
+        const dayInput = document.getElementByID("dayInput");
+
+        
+    </script>
+</body>
+
+</html>

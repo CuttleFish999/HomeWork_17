@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvas {
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" height="500" width="500"></canvas>
+
+    <script>
+        const CANVAS = document.getElementById('canvas');
+        const CVS = CANVAS.getContext("2d");
+
+        let SnakeBody = [
+            { x: 80, y: 0 },
+            { x: 60, y: 0 },
+            { x: 40, y: 0 },
+            { x: 20, y: 0 },
+        ];
+
+        class Snake {
+            // constructor(x, y, size) {
+            constructor() {
+                //     this.x = x;
+                //     this.y = y;
+                    this.size = 20;
+
+            }
+            InitSnake() {
+                let SnakeBody = [
+                    { x: 80, y: 0 },
+                    { x: 60, y: 0 },
+                    { x: 40, y: 0 },
+                    { x: 20, y: 0 },
+                ];
+            }
+            drawSnake() {
+                // CVS.setColor('black');
+                // CVS.fillRect(0, 0, CANVAS.height, CANVAS.width);
+                CVS.clearRect(0,0,CANVAS.width , CANVAS.height);
+
+                for (let i = 0; i < SnakeBody.length; i++) {
+                    // CVS.setColor('green');
+                    
+                    
+                    if (i === 0){
+                        CVS.fillStyle = "green";
+                        CVS.strokeStyle = 'white';
+                    CVS.lineWidth = 2;
+                    CVS.stroke();
+                    CVS.fillRect(SnakeBody[i].x, SnakeBody[i].y, this.size, this.size);
+                    }
+                    
+                }
+
+            }
+
+        }
+
+        S = new Snake();
+        S.drawSnake();
+    </script>
+</body>
+
+</html>
