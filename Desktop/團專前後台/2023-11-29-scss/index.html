@@ -238,7 +238,6 @@
                     <li class="nav-item"><a class="nav-link" href="#rent-services">租賃服務</a></li>
                     <li class="nav-item"><a class="nav-link" href="#shop">購物商城</a></li>
                     <li class="nav-item"><a class="nav-link" href="#announcement">公告</a></li>
-
                     <li class="nav-item"><a class="nav-link" href="#callUs">聯絡我們</a></li>
                 </ul>
             </div>
@@ -251,6 +250,16 @@
             <!-- <p class="lead"></p> -->
             <a class="btn btn-lg btn-light" id="join-member-btn" href="#about">加入會員</a>
         </div>
+
+        <div id="member-login-div">
+            <h1>登入會員</h1>
+            <img src="/icon/x.png" id="close-login-div" alt="">
+            <input type="text" id="user-id" placeholder="  請輸入帳號">
+            <input type="text" id="user-pass" placeholder="  請輸入密碼">
+            <a href="#" id="forgetPass">忘記密碼</a>
+            <button type="button" id="login-btn">登入</button>
+        </div>
+
     </header>
     <!-- About 房東 section-->
     <section id="about-landlord">
@@ -391,6 +400,29 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+    <script>
+        const join_member_btn = document.querySelector("#join-member-btn");
+        const member_login_div = document.querySelector("#member-login-div");
+
+        let btn_is_True = false;
+        join_member_btn.addEventListener('click' , ()=>{
+            if(btn_is_True){
+                member_login_div.style.display = "block";
+            }else{
+                member_login_div.style.display = "none";
+            }
+            btn_is_True = !btn_is_True;
+        })
+        let login_is_True = true;
+        const close_login_div = document.querySelector("#close-login-div");
+        close_login_div.addEventListener('click' , ()=>{
+            if(close_login_div){
+
+                member_login_div.style.display = "none";
+            }
+
+        })
+    </script>
 </body>
 
 </html>

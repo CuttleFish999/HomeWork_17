@@ -8,19 +8,22 @@
 
         /* 6.如果不是第一區塊，需在父加上padding 10% */
         /* 元件設定模板 */
+
+
 // 區塊元素-大小
 $SuperFullPage : 100%;
+$loginBlockWidth : 500px;
 // 背景主題-顏色
 $NavBC : #132536;
-$backgroundColor_1 : #000;
-$backgroundColor_2 : #FFF;
+$backgroundColor_1 :  rgba(0,0,0,.9);
+$backgroundColor_2 : rgba(255,255,255,1);
 // 文字-顏色
 $h1FontColor_1 : #FFF;
 $h1FontColor_2 : #000;
 $h1FontWeight : 600;
 // 文字-大小
 $h1FontSize : 3em;
-$navbar-brandFrontSize : 1.8em;
+$navbar-brandFrontSize : 2em;
 $NavliFontSize : 1.5em;
 $liFontSize : 1.5em;
 
@@ -72,15 +75,66 @@ html,body{
 header#about{
     height: $SuperFullPage;
     background:$backgroundColor_1 !important;
+
+    // 帳密div
+    div#member-login-div{
+        display: none;
+        background: $backgroundColor_2 ;
+        width: $loginBlockWidth;
+        height: 184px;
+        position: relative;
+        left: 20%;
+        top: -64%;
+        border-radius: 25px;
+        img#close-login-div{
+            width: 25px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        h1{
+            color: $h1FontColor_2;
+            padding-left: 5em;
+            line-height: 1.6em;
+            
+        }
+        input{
+            width:($loginBlockWidth - 100px) ;
+            font-size: $pFontSize;
+            margin: 5px;
+            border-radius: 15px;
+            // text-align: center;
+        }
+        button#login-btn{
+            background: rgba(38, 122, 38,.8);
+            font-size: $btnFontSize;
+            width: 75px;
+            height: 95px;
+            border-radius: 15px;
+            position: absolute;
+            top: 63px;
+            left: 414px;
+            
+        }
+        a#forgetPass{
+            position: absolute;
+            bottom: 0;
+            left: 12.5em;
+        }
+    }
+
     div#about-div{
         height: $SuperFullPage;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+      
+
         h1{
             font-size: $h1FontSize;
             margin-bottom: 1em;
+            font-weight: $h1FontWeight;
         }
         p{
             font-size: $pFontSize;
@@ -112,6 +166,7 @@ section#about-landlord{
         h1{
             font-size: $h1FontSize;
             margin-bottom: 1em;
+            font-weight: $h1FontWeight;
         }
         p{
             font-size: $pFontSize;
@@ -149,6 +204,7 @@ section#rent-services{
             color: $h1FontColor_1;
             font-size: $h1FontSize;
             margin-bottom: 1em;
+            font-weight: $h1FontWeight;
         }
         a#rent-services-btn{
             color: $btnColor_1 !important;
@@ -179,6 +235,7 @@ section#shop{
             color: $h1FontColor_2;
             font-size: $h1FontSize;
             margin-bottom: 1em;
+            font-weight: $h1FontWeight;
         }
         p{
             font-size: $pFontSize;
@@ -211,7 +268,8 @@ section#announcement {
         h1{
             color: $h1FontColor_1;
             font-size: $h1FontSize;
-            margin-bottom: 1em;
+            margin-top: -2em;
+            font-weight: $h1FontWeight;
         }
         
         a#rent-services-btn{
@@ -253,5 +311,12 @@ section#callUs {
         color: $h1FontColor_2;
         font-size: $h1FontSize;
         margin-top: -2em;
+        font-weight: $h1FontWeight;
     }
+}
+
+// other
+
+.navbar-nav .show > .nav-link, .navbar-nav .nav-link.active {
+    color: yellow !important;
 }

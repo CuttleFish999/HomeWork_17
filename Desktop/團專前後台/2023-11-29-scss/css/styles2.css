@@ -20,7 +20,7 @@ html nav#mainNav, body nav#mainNav {
   background: #132536 !important;
 }
 html nav#mainNav a.navbar-brand, body nav#mainNav a.navbar-brand {
-  font-size: 1.8em;
+  font-size: 2em;
 }
 html nav#mainNav div#navbarResponsive li.nav-item, body nav#mainNav div#navbarResponsive li.nav-item {
   font-size: 1.5em;
@@ -32,7 +32,49 @@ html li a.nav-link:hover, body li a.nav-link:hover {
 
 header#about {
   height: 100%;
-  background: #000 !important;
+  background: rgba(0, 0, 0, 0.9) !important;
+}
+header#about div#member-login-div {
+  display: none;
+  background: rgb(255, 255, 255);
+  width: 500px;
+  height: 184px;
+  position: relative;
+  left: 20%;
+  top: -64%;
+  border-radius: 25px;
+}
+header#about div#member-login-div img#close-login-div {
+  width: 25px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+header#about div#member-login-div h1 {
+  color: #000;
+  padding-left: 5em;
+  line-height: 1.6em;
+}
+header#about div#member-login-div input {
+  width: 400px;
+  font-size: 1.5em;
+  margin: 5px;
+  border-radius: 15px;
+}
+header#about div#member-login-div button#login-btn {
+  background: rgba(38, 122, 38, 0.8);
+  font-size: 1.5em;
+  width: 75px;
+  height: 95px;
+  border-radius: 15px;
+  position: absolute;
+  top: 63px;
+  left: 414px;
+}
+header#about div#member-login-div a#forgetPass {
+  position: absolute;
+  bottom: 0;
+  left: 12.5em;
 }
 header#about div#about-div {
   height: 100%;
@@ -44,6 +86,7 @@ header#about div#about-div {
 header#about div#about-div h1 {
   font-size: 3em;
   margin-bottom: 1em;
+  font-weight: 600;
 }
 header#about div#about-div p {
   font-size: 1.5em;
@@ -62,7 +105,7 @@ header#about div#about-div a#join-member-btn:hover {
 
 section#about-landlord {
   height: 100%;
-  background: #FFF !important;
+  background: rgb(255, 255, 255) !important;
 }
 section#about-landlord div#about-landlord-div {
   height: 100%;
@@ -74,6 +117,7 @@ section#about-landlord div#about-landlord-div {
 section#about-landlord div#about-landlord-div h1 {
   font-size: 3em;
   margin-bottom: 1em;
+  font-weight: 600;
 }
 section#about-landlord div#about-landlord-div p {
   font-size: 1.5em;
@@ -95,7 +139,7 @@ section#about-landlord div#about-landlord-div a#join-landlord-btn:hover {
 
 section#rent-services {
   height: 100%;
-  background: #000 !important;
+  background: rgba(0, 0, 0, 0.9) !important;
 }
 section#rent-services div#rent-services-div {
   height: 100%;
@@ -109,6 +153,7 @@ section#rent-services div#rent-services-div h1 {
   color: #FFF;
   font-size: 3em;
   margin-bottom: 1em;
+  font-weight: 600;
 }
 section#rent-services div#rent-services-div a#rent-services-btn {
   color: green !important;
@@ -124,7 +169,7 @@ section#rent-services div#rent-services-div a#rent-services-btn:hover {
 
 section#shop {
   height: 100%;
-  background: #FFF !important;
+  background: rgb(255, 255, 255) !important;
 }
 section#shop div#shop-div {
   height: 100%;
@@ -137,6 +182,7 @@ section#shop div#shop-div h1 {
   color: #000;
   font-size: 3em;
   margin-bottom: 1em;
+  font-weight: 600;
 }
 section#shop div#shop-div p {
   font-size: 1.5em;
@@ -155,7 +201,7 @@ section#shop div#shop-div a#rent-services-btn:hover {
 
 section#announcement {
   height: 100%;
-  background: #000 !important;
+  background: rgba(0, 0, 0, 0.9) !important;
 }
 section#announcement div#announcement-div {
   height: 100%;
@@ -167,7 +213,8 @@ section#announcement div#announcement-div {
 section#announcement div#announcement-div h1 {
   color: #FFF;
   font-size: 3em;
-  margin-bottom: 1em;
+  margin-top: -2em;
+  font-weight: 600;
 }
 section#announcement div#announcement-div a#rent-services-btn {
   color: rgb(96, 128, 0) !important;
@@ -193,7 +240,7 @@ section#announcement div#announcement-ol ol li {
 
 section#callUs {
   height: 80%;
-  background: #FFF !important;
+  background: rgb(255, 255, 255) !important;
 }
 section#callUs div#callUs-div {
   height: 100%;
@@ -206,4 +253,9 @@ section#callUs h1 {
   color: #000;
   font-size: 3em;
   margin-top: -2em;
+  font-weight: 600;
+}
+
+.navbar-nav .show > .nav-link, .navbar-nav .nav-link.active {
+  color: yellow !important;
 }/*# sourceMappingURL=styles2.css.map */
